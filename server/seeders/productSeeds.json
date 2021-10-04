@@ -1,0 +1,74 @@
+[
+  {
+    "productID": "1",
+    "productName": "#1 Snowboard 2021",
+    "productDescription": "a really good snowboard",
+    "productImage": "",
+    "productPrice": "420.00",
+    "productCategory": "Snowboards"
+  },
+  {
+    "productID": "2",
+    "productName": "#2 Snowboard",
+    "productDescription": "another really good snowboard",
+    "productImage": "",
+    "productPrice": "500",
+    "productCategory": "Snowboards"
+  },
+  {
+    "productID": "3",
+    "productName": "#1 Skis",
+    "productDescription": "#1 skis",
+    "productImage": "",
+    "productPrice": "600",
+    "productCategory": "Skis"
+  },
+  {
+    "productID": "4",
+    "productName": "#2 Skis",
+    "productDescription": "#2 skis",
+    "productImage": "",
+    "productPrice": "700",
+    "productCategory": "Skis"
+  },
+  {
+    "productID": "5",
+    "productName": "#3 Skis",
+    "productDescription": "#3 skis",
+    "productImage": "",
+    "productPrice": "800",
+    "productCategory": "Skis"
+  },
+  {
+    "productID": "6",
+    "productName": "#1 Apparel",
+    "productDescription": "#1 apparel",
+    "productImage": "",
+    "productPrice": "100",
+    "productCategory": "Apparel"
+  },
+  {
+    "productID": "7",
+    "productName": "#2 Apparel",
+    "productDescription": "#2 apparel",
+    "productImage": "",
+    "productPrice": "100",
+    "productCategory": "Apparel"
+  },
+  {
+    "productID": "8",
+    "productName": "#3 Apparel",
+    "productDescription": "#3 apparel",
+    "productImage": "",
+    "productPrice": "100",
+    "productCategory": "Apparel"
+  },
+  {
+    "productID": "9",
+    "productName": "#4 Apparel",
+    "productDescription": "#4 apparel",
+    "productImage": "",
+    "productPrice": "200",
+    "productCategory": "Apparel"
+  }
+]

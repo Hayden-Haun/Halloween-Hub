@@ -7,7 +7,16 @@ const typeDefs = gql`
     email: String!
     password: String
     bookCount: Int
-    savedBooks: [Book]!
+    userCart: [Product]!
+  }
+
+  type Product {
+    productId: String!
+    productName: String!
+    productDescription: String!
+    productImage: String!
+    productPrice: Number!
+    productCategory: String!
   }
 
   type Book {
