@@ -110,7 +110,7 @@ db.once("open", async () => {
       name: "12ft Skeleton",
       description:
         "Home Accents 12 ft. Giant-Sized Skeleton with LifeEyes! Over 95lb package! Will make your house or farm the talk of the town!",
-      image: "Outdoor_GiantSkeleton_1000.jpg",
+      image: "Outdoor_GiantSkeleton_1000.png",
       category: categories[1]._id,
       price: 1000.0,
       quantity: 33,
