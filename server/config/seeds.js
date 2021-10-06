@@ -45,6 +45,7 @@ db.once("open", async () => {
       name: "Alien Dress",
       description:
         "Your outer space attire is super important when trying to fit in with all the other aliens! In this alien dress you’ll have everyone jealous of your adorable look.",
+      image: "apparel-womens-alien.png",
       category: categories[0]._id,
       price: 34.99,
       quantity: 95,
@@ -99,7 +100,7 @@ db.once("open", async () => {
       name: "14 Ft Hearse Inflatable - Decorations",
       description:
         "Everyone in the neighborhood will be amazed with how awesome your home looks this Halloween once you decorate your yard with this 14 Ft. Hearse Inflatable. With this huge inflatable in your yard everyone will know that you don't mess around when it comes to decorating for Halloween. Featuring tethers and stakes for suppport this Hearse inflatable is sure to blow you away!",
-      image: "outdoor-hearse-decoration.png",
+      image: "outdoor-hearse.png",
       category: categories[1]._id,
       price: 139.99,
       quantity: 22,
