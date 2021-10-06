@@ -7,48 +7,51 @@ function Nav() {
   function showNavigation() {
     if (Auth.loggedIn()) {
       return (
-        <ul className="buttons pr-5">
-          <li className="mx-1" className="button is-light">
+        <div>
+          <button className="button is-light ml-1 mb-1">
             <Link to="/orderHistory">Order History</Link>
-          </li>
-          <li className="mx-1" className="button is-light">
-            {/* this is not using the Link component to logout or user and then refresh the application to the start */}
-            <a href="/" onClick={() => Auth.logout()}>
-              Logout
-            </a>
-          </li>
-        </ul>
+          </button>
+          <a
+            className="button is-light ml-1 mb-1"
+            href="/"
+            onClick={() => Auth.logout()}
+          >
+            Logout
+          </a>
+        </div>
       );
     } else {
       return (
-        <ul className="buttons pr-5">
-          <li className="mx-1">
+        <div>
+          <button className="button is-light ml-1 mb-1">
             <Link to="/signup" className="button is-light">
               Signup
             </Link>
-          </li>
-          <li className="mx-1">
+          </button>
+          <button className="button is-light ml-1 mb-1">
             <Link to="/login" className="button is-light">
               Login
             </Link>
-          </li>
-        </ul>
+          </button>
+        </div>
       );
     }
   }
 
   return (
-    <header className="navbar is-dark is-flex is-justify-content-space-between is-align-items-center">
-      <h1 className="pl-5">
-        <Link to="/" className="is-size-1 has-text-light">
+    <header className="navbar is-dark columns is-vcentered">
+      <h1 className="column is-3 is-offset-1 has-text-centered">
+        <Link to="/" className="is-size-1 has-text-light has-text-weight-bold">
           <span role="img" aria-label="shopping bag"></span>
-          HALLOWEEN STORE
+          HALLOWEEN HUB
         </Link>
       </h1>
-      <div>
+      <div className="column is-3 is-offset-1 has-text-centered">
         <CategoryMenu />
       </div>
-      <nav>{showNavigation()}</nav>
+      <nav className="column is-3 is-offset-1 has-text-centered">
+        {showNavigation()}
+      </nav>
     </header>
   );
 }
