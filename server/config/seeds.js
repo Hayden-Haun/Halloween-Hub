@@ -22,6 +22,7 @@ db.once("open", async () => {
   await Product.deleteMany();
 
   const products = await Product.insertMany([
+    //  --- APPAREL ---
     {
       name: "Adult King Shark Inflatable Costume",
       description:
@@ -75,6 +76,7 @@ db.once("open", async () => {
       price: 39.99,
       quantity: 10,
     },
+    //  --- OUTDOORS ---
     {
       name: "5.8 Ft Wacky Mole Clown Animatronic",
       description:
@@ -130,6 +132,7 @@ db.once("open", async () => {
       price: 15.99,
       quantity: 164,
     },
+    //  --- INDOORS ---
     {
       name: "Black and White Mystical Tablecloth",
       description:
@@ -192,6 +195,107 @@ db.once("open", async () => {
       category: categories[2]._id,
       price: 16.99,
       quantity: 365,
+    },
+    // ACCESSORIES
+    {
+      name: "GhostBuster",
+      description:
+        "Wrangle up those pesky ghosts this Halloween with this officially licensed ghost trap from the Ghostbusters film. This ghost trap looks just like a prop from the movie and even lights up and makes sounds. Also featuring a versatile clip to attach to your belt, this ghost trap will always be ready for the next ghost hunt! If you come across any ghosts this Halloween, you know who to call!",
+      image: "Accessories_GhostBuster49_99.png",
+      category: categories[3]._id,
+      price: 49.99,
+      quantity: 88,
+    },
+    {
+      name: "Bob Ross Wig",
+      description:
+        "It's your chance to become one of the most successful painters the world will ever know! This Bob Ross wig and beard make you feel like you're a part of his world of paint! Don't forget a happy little tree!",
+      image: "Accessories_BobRoss19_99.png",
+      category: categories[3]._id,
+      price: 19.99,
+      quantity: 25,
+    },
+    {
+      name: "Minecraft Pickaxe",
+      description:
+        "Add this Enchanted Minecraft Pickaxe to your inventory this Halloween and you'll be ready to find plenty of diamonds! This enchanted pickaxe is an amazing accessory to go along with any Minecraft costume and will help you look just like you're in the game at your next con.",
+      image: "Accessories_Minecraft16_99.png",
+      category: categories[3]._id,
+      price: 16.99,
+      quantity: 140,
+    },
+    {
+      name: "Nightmare Before Christmas Shock Mask",
+      description:
+        "Be the smart one of your terrible trio and complete your Nightmare Before Christmas costume with this officially licensed Shock mask! Whether you're plotting to kidnap Sandy Claws or you're catching bugs for Oogie Boogie, Shock's signature witch mask is sure to help you do it in style! ",
+      image: "Accessories_NightmareBeforeMaks14_99.png",
+      category: categories[3]._id,
+      price: 14.99,
+      quantity: 230,
+    },
+    {
+      name: "Avatar Zuko Mask",
+      description:
+        "Dress up like your favorite character in this official Avatar: The Last Airbender Zuko Blue Spirit Half Mask! This Blue Spirit molded mask looks just like the one Zuko uses to disguises himself and is the perfect topper to your Zuko costume (sold separately). Make Halloween even more exciting when you wear this mask.",
+      image: "Accessories_AvatarMask12_99.png",
+      category: categories[3]._id,
+      price: 12.99,
+      quantity: 115,
+    },
+    {
+      name: "Legend of Zelda Master Sword",
+      description:
+        "Link needs his sword to defend Hyrule! This officially licensed Legend of Zelda Link Sword features a purple winged guard with yellow details and an ombré teal sword. The scabbard is blue and yellow and features the triforce! With this sword in hand, you'll be ready to face Ganon.",
+      image: "Accessories_MasterSword19_99.png",
+      category: categories[3]._id,
+      price: 19.99,
+      quantity: 75,
+    },
+    //  --- LIGHTS ---
+    {
+      name: "Ghostbusters Slimer",
+      description:
+        "Oh, there’s definitely something strange in the neighborhood—and it’s right on your front lawn! Light up your yard with these officially licensed Slimer pathway lights and have Slimer guide your friends and family right to your front door. Whether you’re decorating for Halloween or you’re just a huge Ghostbusters fan, these fun lights are sure to make all of your guests smile!",
+      image: "Lights_GhostbustersSlimer34_99.png",
+      category: categories[4]._id,
+      price: 34.99,
+      quantity: 45,
+    },
+    {
+      name: "Light Up Flaming Pumpkin",
+      description:
+        "Light up your home with this officially licensed Light Up Flaming Pumpkin decoration and you'll always be reminded of your favorite Halloween movie, Trick 'r Treat. This flaming pumpkin will be sure to protect you from a visit from Sam as long as you don't take down the rest of your décor before November 1st! Follow the rules of Halloween and light up your home with style by getting this officially licensed flaming pumpkin for yourself! ",
+      image: "Lights_FlamingPumpkin59_99.png",
+      category: categories[4]._id,
+      price: 59.99,
+      quantity: 400,
+    },
+    {
+      name: "Hanging Flame",
+      description:
+        "Cast some creepy light on any dark dungeon or haunted house with these realistic flaming fire lamps! Hanging from chains these silk lights provide an eerie ambiance to any mystic event.",
+      image: "Lights_HangingFlame24_99.png",
+      category: categories[4]._id,
+      price: 24.99,
+      quantity: 350,
+    },
+    {
+      name: "Black Light Bulbs",
+      description:
+        "It may be little, but this black light packs a huge punch! The intensity of this screw-in black light is comparable to that of a 19-inch tube. A few of these can make a haunted house decoration, dorm decoration, or dungeon effect in moments!",
+      image: "Lights_BlackLight1299.png",
+      category: categories[4]._id,
+      price: 12.99,
+      quantity: 350,
+    },
+    {
+      name: "Black Light Spotlight",
+      description:
+        "Light up the night with this black light fire and ice spotlight! Make your street glow and stand out on Halloween night. This fire and ice light will give you a lightshow projection that will have everyone intrigued! The perfect cherry on top to your Halloween horror scene.",
+      image: "Lights_BlacklightSpotlight2499.png",
+      category: categories[4]._id,
+      price: 24.99,
+      quantity: 350,
     },
     // {
     //   name: "Tin of Cookies",
