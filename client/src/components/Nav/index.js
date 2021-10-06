@@ -3,17 +3,14 @@ import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
 
 function Nav() {
-
   function showNavigation() {
     if (Auth.loggedIn()) {
       return (
-        <ul className="flex-row">
-          <li className="mx-1">
-            <Link to="/orderHistory">
-              Order History
-            </Link>
+        <ul className="buttons pr-5">
+          <li className="mx-1" className="button is-light">
+            <Link to="/orderHistory">Order History</Link>
           </li>
-          <li className="mx-1">
+          <li className="mx-1" className="button is-light">
             {/* this is not using the Link component to logout or user and then refresh the application to the start */}
             <a href="/" onClick={() => Auth.logout()}>
               Logout
@@ -23,14 +20,14 @@ function Nav() {
       );
     } else {
       return (
-        <ul className="flex-row">
+        <ul className="buttons pr-5">
           <li className="mx-1">
-            <Link to="/signup">
+            <Link to="/signup" className="button is-light">
               Signup
             </Link>
           </li>
           <li className="mx-1">
-            <Link to="/login">
+            <Link to="/login" className="button is-light">
               Login
             </Link>
           </li>
@@ -40,17 +37,15 @@ function Nav() {
   }
 
   return (
-    <header className="flex-row px-1">
-      <h1>
-        <Link to="/">
-          <span role="img" aria-label="shopping bag">🛍️</span>
-          -Shop-Shop
+    <header className="navbar is-dark is-flex is-justify-content-space-between is-align-items-center">
+      <h1 className="pl-5">
+        <Link to="/" className="is-size-1 has-text-light">
+          <span role="img" aria-label="shopping bag"></span>
+          HALLOWEEN STORE
         </Link>
       </h1>
-
-      <nav>
-        {showNavigation()}
-      </nav>
+      <div></div>
+      <nav>{showNavigation()}</nav>
     </header>
   );
 }
