@@ -1,6 +1,7 @@
 import React from "react";
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
+import CategoryMenu from "../CategoryMenu";
 
 function Nav() {
   function showNavigation() {
@@ -44,7 +45,9 @@ function Nav() {
           HALLOWEEN STORE
         </Link>
       </h1>
-      <div></div>
+      <div>
+        <CategoryMenu />
+      </div>
       <nav>{showNavigation()}</nav>
     </header>
   );
