@@ -39,7 +39,7 @@ function Nav() {
   }
 
   return (
-    <header className="navbar is-dark columns is-vcentered">
+    <header className="navbar is-dark columns is-vcentered my-0 py-1">
       <h1 className="column is-3 is-offset-1 has-text-centered">
         <Link to="/" className="is-size-1 has-text-light has-text-weight-bold">
           <span role="img" aria-label="shopping bag"></span>
