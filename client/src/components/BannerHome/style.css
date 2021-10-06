@@ -1,0 +1,35 @@
+.bannerBackground {
+  /* background-image: "/images/spooky-house.jpg"; */
+  background-image: url("../../assets/images/spooky-house.jpg");
+  height: 95vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: bottom;
+  background-size: cover;
+}
+
+.boxGrid {
+  height: 50vh;
+  width: 50vw;
+}
+
+.boxImage2 {
+  background-image: url("../../assets/images/skeleton-party.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: bottom;
+  background-size: cover;
+}
+
+.boxImage1 {
+  background-image: url("../../assets/images/pumpkin-clouds.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  /* background-position: bottom; */
+  background-size: cover;
+}
+
+.boxText {
+  background-color: grey;
+}
