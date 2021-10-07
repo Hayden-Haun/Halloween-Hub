@@ -45,7 +45,7 @@ function App() {
       <Router>
         <>
           <StoreProvider>
-            <Nav />
+            {/* <Nav /> */}
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/products" component={Products} />
