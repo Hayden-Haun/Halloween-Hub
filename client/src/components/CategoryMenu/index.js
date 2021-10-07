@@ -8,6 +8,8 @@ import {
 import { QUERY_CATEGORIES } from "../../utils/queries";
 import { idbPromise } from "../../utils/helpers";
 
+import { Link } from "react-router-dom";
+
 function CategoryMenu() {
   const [state, dispatch] = useStoreContext();
 
@@ -51,7 +53,9 @@ function CategoryMenu() {
             handleClick(item._id);
           }}
         >
-          {item.name}
+          <Link className="has-text-white" to="/products">
+            {item.name}
+          </Link>
         </button>
       ))}
     </div>
