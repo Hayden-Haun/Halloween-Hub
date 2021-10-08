@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import "./countdown.css";
 
 function Countdown() {
   const calculateTimeLeft = () => {
@@ -36,13 +36,13 @@ function Countdown() {
     }
 
     timerComponents.push(
-      <span>
+      <h3>
         {timeLeft[interval]} {interval}{" "}
-      </span>
+      </h3>
     );
   });
   return (
-    <div class = "countdown">
+    <div className="countdown-container countdown-el big-text">
       <h1>Countdown to Halloween {year}</h1>
       {timerComponents.length ? timerComponents : <span>Time's up!</span>}
     </div>
@@ -50,5 +50,3 @@ function Countdown() {
 }
 
 export default Countdown;
-
-

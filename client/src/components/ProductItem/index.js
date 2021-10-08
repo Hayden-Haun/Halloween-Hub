@@ -4,6 +4,7 @@ import { pluralize } from "../../utils/helpers";
 import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
+import "./productItem.css";
 
 function ProductItem(item) {
   const [state, dispatch] = useStoreContext();
@@ -47,32 +48,38 @@ function ProductItem(item) {
     //   </div>
     //   <button onClick={addToCart}>Add to cart</button>
     // </div>
-    <>
-      <div className="card mt-5 column is-one-quarter has-background-white">
+    <div className="column is-4-tablet is-3-desktop">
+      <div className="card normalizeCardSize pt-1">
         {/* <header class="is-flex is-justify-content-center is-align-items-center">
           <h1 class="title has-text-centered is-size-1">{name}</h1>
         </header> */}
+
         <div className="card-image my-4">
           <figure className="image is-4by3">
-            <img src={`/images/${image}`} alt={name} />
+            <Link to={`/products/${_id}`}>
+              <img src={`/images/${image}`} alt={name} />
+            </Link>
           </figure>
         </div>
         <div className="card-content">
           <div className="media">
-            <div className="media-content">
-              <p className="title is-4 has-text-centered">{name}</p>
+            <div className="media-content shortenText">
+              <Link to={`/products/${_id}`}>
+                <div className="title is-4 has-text-centered shortenText">{name}</div>
+              </Link>
+
               <p className="is-6 has-text-centered">${price}</p>
               <p className="is-6 has-text-centered">In Stock: {quantity}</p>
             </div>
           </div>
         </div>
-        <footer class="card-footer">
-          <a href="" class="card-footer-item" onClick={addToCart}>
+        <footer className="is-flex is-justify-content-center">
+          <a href="" className="button is-primary" onClick={addToCart}>
             Add to Cart
           </a>
         </footer>
       </div>
-    </>
+    </div>
   );
 }
 

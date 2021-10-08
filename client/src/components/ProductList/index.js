@@ -38,9 +38,7 @@ function ProductList() {
       return state.products;
     }
 
-    return state.products.filter(
-      (product) => product.category._id === currentCategory
-    );
+    return state.products.filter((product) => product.category._id === currentCategory);
   }
 
   return (
@@ -48,8 +46,8 @@ function ProductList() {
       {/* // <div className="my-2"> */}
       {/* <h2>Our Products:</h2> */}
       {state.products.length ? (
-        <div className="">
-          <div className="columns is-multiline is-flex is-justify-content-space-around is-align-items-center mx-6">
+        <div style={{ height: "100%" }} className="container">
+          <div className="columns is-multiline is-8 is-variable mt-5">
             {filterProducts().map((product) => (
               <ProductItem
                 key={product._id}

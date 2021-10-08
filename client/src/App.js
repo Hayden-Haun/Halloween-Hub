@@ -1,11 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-  createHttpLink,
-} from "@apollo/client";
+import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 
 import Home from "./pages/Home";
@@ -46,9 +41,9 @@ function App() {
       <Router>
         <>
           <StoreProvider>
-            <div className="has-background-grey-lighter">
-              <Nav />
+            <Nav />
 
+            <div style={{ height: "100%" }} className="has-background-grey-lighter">
               <Switch>
                 <Route exact path="/" component={Home} />
                 <Route exact path="/products" component={Products} />
@@ -59,8 +54,8 @@ function App() {
                 <Route exact path="/products/:id" component={Detail} />
                 <Route component={NoMatch} />
               </Switch>
-              <Footer />
             </div>
+            <Footer />
           </StoreProvider>
         </>
       </Router>

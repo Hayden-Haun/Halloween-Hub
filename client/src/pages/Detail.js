@@ -4,12 +4,7 @@ import { useQuery } from "@apollo/client";
 
 import Cart from "../components/Cart";
 import { useStoreContext } from "../utils/GlobalState";
-import {
-  REMOVE_FROM_CART,
-  UPDATE_CART_QUANTITY,
-  ADD_TO_CART,
-  UPDATE_PRODUCTS,
-} from "../utils/actions";
+import { REMOVE_FROM_CART, UPDATE_CART_QUANTITY, ADD_TO_CART, UPDATE_PRODUCTS } from "../utils/actions";
 import { QUERY_PRODUCTS } from "../utils/queries";
 import { idbPromise } from "../utils/helpers";
 import spinner from "../assets/spinner.gif";
@@ -88,40 +83,31 @@ function Detail() {
           <Link to="/">← Back to Products</Link>
           <div className="columns is-justify-content-center">
             <div className="card mt-5 column is-half has-background-white">
-              <header class="is-flex is-justify-content-center is-align-items-center">
-                <h1 class="title has-text-centered is-size-1">
-                  {currentProduct.name}
-                </h1>
+              <header className="is-flex is-justify-content-center is-align-items-center">
+                <h1 className="title has-text-centered is-size-1">{currentProduct.name}</h1>
               </header>
               <div className="card-image my-4">
                 <figure className="image is-4by3">
-                  <img
-                    src={`/images/${currentProduct.image}`}
-                    alt={currentProduct.name}
-                  />
+                  <img src={`/images/${currentProduct.image}`} alt={currentProduct.name} />
                 </figure>
               </div>
               <div className="card-content">
                 <div className="media">
                   <div className="media-content">
-                    <p className="title is-4 has-text-centered">
-                      {currentProduct.name}
-                    </p>
-                    <p className="subtitle is-6 has-text-centered">
-                      ${currentProduct.price}
-                    </p>
+                    <p className="title is-4 has-text-centered">{currentProduct.name}</p>
+                    <p className="subtitle is-6 has-text-centered">${currentProduct.price}</p>
                   </div>
                 </div>
 
                 <div className="content">{currentProduct.description}</div>
               </div>
-              <footer class="card-footer">
-                <a href="" class="card-footer-item" onClick={addToCart}>
+              <footer className="is-flex is-justify-content-center">
+                <a href="" className="button is-primary" onClick={addToCart}>
                   Add to Cart
                 </a>
                 <a
                   href=""
-                  class="card-footer-item"
+                  className="button ml-5 is-primary"
                   disabled={!cart.find((p) => p._id === currentProduct._id)}
                   onClick={removeFromCart}
                 >
