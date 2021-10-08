@@ -65,7 +65,9 @@ function ProductItem(item) {
           <div className="media">
             <div className="media-content shortenText">
               <Link to={`/products/${_id}`}>
-                <div className="title is-4 has-text-centered shortenText">{name}</div>
+                <div className="title is-4 has-text-centered shortenText">
+                  {name}
+                </div>
               </Link>
 
               <p className="is-6 has-text-centered">${price}</p>
@@ -74,7 +76,7 @@ function ProductItem(item) {
           </div>
         </div>
         <footer className="is-flex is-justify-content-center">
-          <a href="" className="button is-primary" onClick={addToCart}>
+          <a href="" className="button is-primary mb-4" onClick={addToCart}>
             Add to Cart
           </a>
         </footer>
