@@ -1,0 +1,15 @@
+.normalizeCardSize {
+  min-height: 40vh;
+}
+
+.shortenText {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.shortenText:hover {
+  overflow: auto;
+  white-space: wrap;
+  text-overflow: initial;
+}

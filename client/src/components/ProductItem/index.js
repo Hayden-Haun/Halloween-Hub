@@ -4,6 +4,7 @@ import { pluralize } from "../../utils/helpers";
 import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
+import "./productItem.css";
 
 function ProductItem(item) {
   const [state, dispatch] = useStoreContext();
@@ -47,8 +48,8 @@ function ProductItem(item) {
     //   </div>
     //   <button onClick={addToCart}>Add to cart</button>
     // </div>
-    <>
-      <div className="card mt-5 column is-one-quarter has-background-white">
+    <div className="column is-4-tablet is-3-desktop">
+      <div className="card normalizeCardSize">
         {/* <header class="is-flex is-justify-content-center is-align-items-center">
           <h1 class="title has-text-centered is-size-1">{name}</h1>
         </header> */}
@@ -59,8 +60,8 @@ function ProductItem(item) {
         </div>
         <div className="card-content">
           <div className="media">
-            <div className="media-content">
-              <p className="title is-4 has-text-centered">{name}</p>
+            <div className="media-content shortenText">
+              <div className="title is-4 has-text-centered shortenText">{name}</div>
               <p className="is-6 has-text-centered">${price}</p>
               <p className="is-6 has-text-centered">In Stock: {quantity}</p>
             </div>
@@ -72,7 +73,7 @@ function ProductItem(item) {
           </a>
         </footer>
       </div>
-    </>
+    </div>
   );
 }
 
