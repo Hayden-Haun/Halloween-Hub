@@ -1,6 +1,8 @@
 .normalizeCardSize {
   min-height: 35vh;
-  box-shadow: 10px black;
+}
+.normalizeCardSize:hover {
+  box-shadow: 0 0 50px 1px hsl(259, 100%, 67%);
 }
 
 .shortenText {

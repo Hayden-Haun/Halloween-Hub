@@ -46,7 +46,7 @@ function ProductList() {
       {/* // <div className="my-2"> */}
       {/* <h2>Our Products:</h2> */}
       {state.products.length ? (
-        <div className="container">
+        <div style={{ height: "100%" }} className="container">
           <div className="columns is-multiline is-8 is-variable mt-5">
             {filterProducts().map((product) => (
               <ProductItem
