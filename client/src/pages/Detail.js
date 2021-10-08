@@ -1,18 +1,19 @@
-import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import { useQuery } from '@apollo/client';
+import React, { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import { useQuery } from "@apollo/client";
 
-import Cart from '../components/Cart';
-import { useStoreContext } from '../utils/GlobalState';
+import Cart from "../components/Cart";
+import { useStoreContext } from "../utils/GlobalState";
 import {
   REMOVE_FROM_CART,
   UPDATE_CART_QUANTITY,
   ADD_TO_CART,
   UPDATE_PRODUCTS,
-} from '../utils/actions';
-import { QUERY_PRODUCTS } from '../utils/queries';
-import { idbPromise } from '../utils/helpers';
-import spinner from '../assets/spinner.gif';
+} from "../utils/actions";
+import { QUERY_PRODUCTS } from "../utils/queries";
+import { idbPromise } from "../utils/helpers";
+import spinner from "../assets/spinner.gif";
+import "bulma/css/bulma.min.css";
 
 function Detail() {
   const [state, dispatch] = useStoreContext();
@@ -37,12 +38,12 @@ function Detail() {
       });
 
       data.products.forEach((product) => {
-        idbPromise('products', 'put', product);
+        idbPromise("products", "put", product);
       });
     }
     // get cache from idb
     else if (!loading) {
-      idbPromise('products', 'get').then((indexedProducts) => {
+      idbPromise("products", "get").then((indexedProducts) => {
         dispatch({
           type: UPDATE_PRODUCTS,
           products: indexedProducts,
@@ -59,7 +60,7 @@ function Detail() {
         _id: id,
         purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
       });
-      idbPromise('cart', 'put', {
+      idbPromise("cart", "put", {
         ...itemInCart,
         purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
       });
@@ -68,7 +69,7 @@ function Detail() {
         type: ADD_TO_CART,
         product: { ...currentProduct, purchaseQuantity: 1 },
       });
-      idbPromise('cart', 'put', { ...currentProduct, purchaseQuantity: 1 });
+      idbPromise("cart", "put", { ...currentProduct, purchaseQuantity: 1 });
     }
   };
 
@@ -78,35 +79,82 @@ function Detail() {
       _id: currentProduct._id,
     });
 
-    idbPromise('cart', 'delete', { ...currentProduct });
+    idbPromise("cart", "delete", { ...currentProduct });
   };
 
   return (
     <>
       {currentProduct && cart ? (
-        <div className="container my-1">
+        <>
+          {/* <div className="container my-1">
+            <Link to="/">← Back to Products</Link>
+
+            <h2>{currentProduct.name}</h2>
+
+            <p>{currentProduct.description}</p>
+
+            <p>
+              <strong>Price:</strong>${currentProduct.price}{" "}
+              <button onClick={addToCart}>Add to Cart</button>
+              <button
+                disabled={!cart.find((p) => p._id === currentProduct._id)}
+                onClick={removeFromCart}
+              >
+                Remove from Cart
+              </button>
+            </p>
+
+            <img
+              src={`/images/${currentProduct.image}`}
+              alt={currentProduct.name}
+            />
+          </div> */}
           <Link to="/">← Back to Products</Link>
+          <div className="columns is-justify-content-center">
+            <div className="card mt-5 column is-half has-background-white">
+              <header class="is-flex is-justify-content-center is-align-items-center">
+                <h1 class="title has-text-centered is-size-1">
+                  {currentProduct.name}
+                </h1>
+              </header>
+              <div className="card-image my-4">
+                <figure className="image is-4by3">
+                  <img
+                    src={`/images/${currentProduct.image}`}
+                    alt={currentProduct.name}
+                  />
+                </figure>
+              </div>
+              <div className="card-content">
+                <div className="media">
+                  <div className="media-content">
+                    <p className="title is-4 has-text-centered">
+                      {currentProduct.name}
+                    </p>
+                    <p className="subtitle is-6 has-text-centered">
+                      ${currentProduct.price}
+                    </p>
+                  </div>
+                </div>
 
-          <h2>{currentProduct.name}</h2>
-
-          <p>{currentProduct.description}</p>
-
-          <p>
-            <strong>Price:</strong>${currentProduct.price}{' '}
-            <button onClick={addToCart}>Add to Cart</button>
-            <button
-              disabled={!cart.find((p) => p._id === currentProduct._id)}
-              onClick={removeFromCart}
-            >
-              Remove from Cart
-            </button>
-          </p>
-
-          <img
-            src={`/images/${currentProduct.image}`}
-            alt={currentProduct.name}
-          />
-        </div>
+                <div className="content">{currentProduct.description}</div>
+              </div>
+              <footer class="card-footer">
+                <a href="" class="card-footer-item" onClick={addToCart}>
+                  Add to Cart
+                </a>
+                <a
+                  href=""
+                  class="card-footer-item"
+                  disabled={!cart.find((p) => p._id === currentProduct._id)}
+                  onClick={removeFromCart}
+                >
+                  Remove from Cart
+                </a>
+              </footer>
+            </div>
+          </div>
+        </>
       ) : null}
       {loading ? <img src={spinner} alt="loading" /> : null}
       <Cart />
