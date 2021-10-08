@@ -34,19 +34,45 @@ function ProductItem(item) {
   };
 
   return (
-    <div className="card px-1 py-1">
-      <Link to={`/products/${_id}`}>
-        <img alt={name} src={`/images/${image}`} />
-        <p>{name}</p>
-      </Link>
-      <div>
-        <div>
-          {quantity} {pluralize("item", quantity)} in stock
+    // <div className="card px-1 py-1">
+    //   <Link to={`/products/${_id}`}>
+    //     <img alt={name} src={`/images/${image}`} />
+    //     <p>{name}</p>
+    //   </Link>
+    //   <div>
+    //     <div>
+    //       {quantity} {pluralize("item", quantity)} in stock
+    //     </div>
+    //     <span>${price}</span>
+    //   </div>
+    //   <button onClick={addToCart}>Add to cart</button>
+    // </div>
+    <>
+      <div className="card mt-5 column is-one-quarter has-background-white">
+        {/* <header class="is-flex is-justify-content-center is-align-items-center">
+          <h1 class="title has-text-centered is-size-1">{name}</h1>
+        </header> */}
+        <div className="card-image my-4">
+          <figure className="image is-4by3">
+            <img src={`/images/${image}`} alt={name} />
+          </figure>
         </div>
-        <span>${price}</span>
+        <div className="card-content">
+          <div className="media">
+            <div className="media-content">
+              <p className="title is-4 has-text-centered">{name}</p>
+              <p className="is-6 has-text-centered">${price}</p>
+              <p className="is-6 has-text-centered">In Stock: {quantity}</p>
+            </div>
+          </div>
+        </div>
+        <footer class="card-footer">
+          <a href="" class="card-footer-item" onClick={addToCart}>
+            Add to Cart
+          </a>
+        </footer>
       </div>
-      <button onClick={addToCart}>Add to cart</button>
-    </div>
+    </>
   );
 }
 
