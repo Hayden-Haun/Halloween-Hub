@@ -50,9 +50,7 @@ function Countdown() {
   // });
   return (
     <div className="is-flex is-align-items-center is-flex-direction-column">
-      <h1 className="is-size-1 has-text-centered">
-        Countdown to Halloween {year}
-      </h1>
+      <h1 className="is-size-1 has-text-centered">Countdown to Halloween {year}</h1>
       {/* <div>
         {timerComponents.length ? timerComponents : <span>Time's up!</span>}
       </div> */}
