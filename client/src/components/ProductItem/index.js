@@ -76,9 +76,9 @@ function ProductItem(item) {
           </div>
         </div>
         <footer className="is-flex is-justify-content-center">
-          <a href="" className="button is-primary mb-4" onClick={addToCart}>
+          <button className="button is-primary mb-4" onClick={addToCart}>
             Add to Cart
-          </a>
+          </button>
         </footer>
       </div>
     </div>

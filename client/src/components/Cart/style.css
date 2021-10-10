@@ -1,11 +1,11 @@
 .cart {
   position: fixed;
-  bottom: 4rem;
-  right: 0;
+  bottom: 30%;
+  right: 1%;
   min-width: 20%;
   max-width: 30%;
   max-height: 60%;
-  background-color: var(--light);
+  background-color: white;
   overflow: auto;
   padding: 0.5rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
@@ -37,7 +37,7 @@
   right: 1%;
   font-size: 2rem;
   cursor: pointer;
-  background-color: var(--secondary);
+  background-color: white;
   border-radius: 50%;
   padding: 0.25rem;
   width: 50px;
@@ -65,7 +65,7 @@
     max-width: 100%;
     max-height: auto;
     box-shadow: none;
-    background-color: inherit;
+    background-color: white;
   }
 
   .cart-closed {
