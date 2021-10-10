@@ -34,6 +34,16 @@
   background-color: grey;
 }
 
-.countdown {
-  
+.countdown-banner {
+  color: rgb(170, 90, 0);
+  font-size: 7vh;
+  font-family: "Permanent Marker", cursive;
+}
+.spacer {
+  padding: 2rem;
+}
+
+.countdown-timer {
+  font-size: 10vh;
+  color: white;
 }

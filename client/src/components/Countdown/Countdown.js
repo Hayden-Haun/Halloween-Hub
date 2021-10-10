@@ -50,25 +50,25 @@ function Countdown() {
   // });
   return (
     <div className="is-flex is-align-items-center is-flex-direction-column">
-      <h1 className="is-size-1 has-text-centered">Countdown to Halloween {year}</h1>
+      <h1 className="countdown-banner has-text-centered">Countdown to Halloween {year}</h1>
       {/* <div>
         {timerComponents.length ? timerComponents : <span>Time's up!</span>}
       </div> */}
-      <div className="columns is-multiline has-text-centered">
-        <div className="column is-3 is-flex is-flex-direction-column">
-          <div className="is-size-1">{timeLeft.days}</div>
+      <div className="columns is-justify-content-center has-text-centered">
+        <div className="countdown-timer column is-4 is-flex is-flex-direction-column">
+          <div>{timeLeft.days}</div>
           <div className="is-size-3">Days</div>
         </div>
-        <div className="column is-3 is-flex is-flex-direction-column">
-          <div className="is-size-1">{timeLeft.hours}</div>
+        <div className="countdown-timer column is-4 is-flex is-flex-direction-column">
+          <div>{timeLeft.hours}</div>
           <div className="is-size-3">Hours</div>
         </div>
-        <div className="column is-3 is-flex is-flex-direction-column">
-          <div className="is-size-1">{timeLeft.minutes}</div>
+        <div className="countdown-timer column is-4 is-flex is-flex-direction-column">
+          <div>{timeLeft.minutes}</div>
           <div className="is-size-3">Minutes</div>
         </div>
-        <div className="column is-3 is-flex is-flex-direction-column">
-          <div className="is-size-1">{timeLeft.seconds}</div>
+        <div className="countdown-timer column is-4  is-flex is-flex-direction-column">
+          <div>{timeLeft.seconds}</div>
           <div className="is-size-3">Seconds</div>
         </div>
       </div>
