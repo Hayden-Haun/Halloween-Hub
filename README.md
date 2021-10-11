@@ -29,6 +29,8 @@ NOTE: You may also want to add `node_modules` to your `.gitignore` file to preve
 
 Start the app by running `npm start` in your terminal or CLI. The app is deployed to [http://localhost:3000](http://localhost:3000) by default, but can be changed to your desired port number. It can also be deployed to a hosting service (additional configuration may be required.
 
+Credit Card Info for Testing- 4242 4242 4242 4242, any 3 digits for CVC, any future date for expiration date
+
 ## License
 
 This project is licensed under [License: MIT](https://opensource.org/licenses/MIT)
