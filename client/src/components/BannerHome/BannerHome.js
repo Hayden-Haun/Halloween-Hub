@@ -17,10 +17,10 @@ function BannerHome() {
             <Link to="/products">See all products</Link>
           </button>
         </div>
-        <div className="column boxGrid boxImage1">Box2</div>
+        <div className="column boxGrid boxImage1"></div>
       </div>
       <div className="columns is-gapless my-0 py-0">
-        <div className="column boxGrid boxImage2">Box3</div>
+        <div className="column boxGrid boxImage2"></div>
         <div className="is-flex-direction-column is-flex is-justify-content-center boxGrid has-background-dark">
           <p className="is-align-self-center ad-text">Content</p>
           <button className="is-align-self-center is-light button">
