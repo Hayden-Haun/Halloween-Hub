@@ -11,7 +11,7 @@ function Footer() {
           <span role="img" aria-label="shopping bag"></span>
           HALLOWEEN STORE
         </Link> */}
-        <a href="https://github.com/Hayden-Haun/Project-3/" target="no_blank">
+        <a href="https://github.com/Hayden-Haun/Halloween-Hub" target="no_blank">
           <img src={`/images/github-icon.png`} alt="GitHub" />
         </a>
       </h1>
