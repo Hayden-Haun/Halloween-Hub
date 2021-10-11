@@ -56,4 +56,13 @@
   color: white;
   font-family: "Shadows Into Light", cursive;
   font-size: 5rem;
+  text-align: center;
+  padding-bottom: 3rem;
+  color: black;
+}
+
+@media only screen and (max-width: 768px) {
+  .boxGrid {
+    width: 100vw;
+  }
 }

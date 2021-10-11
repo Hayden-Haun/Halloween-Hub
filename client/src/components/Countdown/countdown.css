@@ -1,32 +1,5 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
-
-h1 {
-  font-weight: normal;
-  font-size: 3rem;
-}
-
-.countdown-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.big-text {
-  font-weight: bold;
-  font-size: 6rem;
-  line-height: 1;
-}
-
-.countdown-el {
-  text-align: center;
-}
-
-.countdown-el span {
-  font-size: 1.3rem;
-} */
-
-@media only screen and (max-width: 600px) {
-  .is-size-1 {
-    font-size: 16px;
+@media only screen and (max-width: 768px) {
+  .countdown-timer {
+    font-size: 48px;
   }
 }

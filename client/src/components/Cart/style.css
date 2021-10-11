@@ -5,7 +5,7 @@
   min-width: 20%;
   max-width: 30%;
   max-height: 60%;
-  background-color: rgb(255, 160, 51);
+  background-color: rgb(251, 249, 245);
   overflow: auto;
   padding: 0.5rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
@@ -33,7 +33,7 @@
 
 .cart-closed {
   position: fixed;
-  bottom: 15%;
+  bottom: 20%;
   right: 3%;
   cursor: pointer;
   background-color: white;
@@ -44,7 +44,7 @@
 }
 
 .fas {
-  font-size: 5rem;
+  font-size: 4rem;
 }
 
 .cart img {
@@ -67,7 +67,7 @@
 
 @media screen and (max-width: 768px) {
   .cart {
-    position: relative;
+    position: fixed;
     max-width: 100%;
     max-height: auto;
     box-shadow: none;
@@ -75,7 +75,7 @@
   }
 
   .cart-closed {
-    position: relative;
+    position: fixed;
     margin: 0 auto;
   }
 }
