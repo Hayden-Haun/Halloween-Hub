@@ -11,8 +11,9 @@ function BannerHome() {
         <Countdown />
       </div>
       <div className="columns is-gapless my-0 py-0">
-        <div className="column boxGrid has-background-dark">
-          <button className="is-light button">
+        <div className="is-flex-direction-column is-flex is-justify-content-center boxGrid has-background-dark">
+          <p className="is-align-self-center ad-text">Content</p>
+          <button className="is-align-self-center is-light button">
             <Link to="/products">See all products</Link>
           </button>
         </div>
@@ -20,7 +21,12 @@ function BannerHome() {
       </div>
       <div className="columns is-gapless my-0 py-0">
         <div className="column boxGrid boxImage2">Box3</div>
-        <div className="column boxGrid has-background-dark">Box4</div>
+        <div className="is-flex-direction-column is-flex is-justify-content-center boxGrid has-background-dark">
+          <p className="is-align-self-center ad-text">Content</p>
+          <button className="is-align-self-center is-light button">
+            <Link to="/products">See all products</Link>
+          </button>
+        </div>
       </div>
     </>
   );

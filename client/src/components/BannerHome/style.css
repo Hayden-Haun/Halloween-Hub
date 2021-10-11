@@ -43,7 +43,17 @@
   padding: 2rem;
 }
 
+.brand {
+  color: black;
+}
+
 .countdown-timer {
   font-size: 10vh;
   color: white;
+}
+
+.ad-text {
+  color: white;
+  font-family: "Shadows Into Light", cursive;
+  font-size: 5rem;
 }
